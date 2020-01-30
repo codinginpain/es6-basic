@@ -12,5 +12,5 @@ console.log(`버퍼 객체인지 여부 : ${Buffer.isBuffer(buffer1)}`);
 var byteLen = Buffer.byteLength(buffer1);
 console.log(`byteLen : ${byteLen}`); //10 출력->  위에서 buffer 객체를 10으로 만들었음
 
-var str1 = buffer1.toString(`utf8`, 0, 5); // 0부터 6 바이트? 5하면 안?뜨고 6하면 안녕 
+var str1 = buffer1.toString(`utf8`, 0, 7); // 0부터 6 바이트? 5하면 안?뜨고 6하면 안녕  -> byte아니고 index인듯.. 7하면 안녕!
 console.log(`str1 : ${str1}`);
