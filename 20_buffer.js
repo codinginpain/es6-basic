@@ -14,3 +14,9 @@ console.log(`byteLen : ${byteLen}`); //10 출력->  위에서 buffer 객체를 1
 
 var str1 = buffer1.toString(`utf8`, 0, 7); // 0부터 6 바이트? 5하면 안?뜨고 6하면 안녕  -> byte아니고 index인듯.. 7하면 안녕!
 console.log(`str1 : ${str1}`);
+
+var buffer2 = Buffer.from(`Hello`, `utf8`);
+console.log(`두번째 버퍼의 길이 : ${Buffer.byteLength(buffer2)}`);
+
+var str2 = buffer2.toString(`utf8`, 0, Buffer.byteLength(buffer2));
+console.log(`str2 : ${str2}`);
