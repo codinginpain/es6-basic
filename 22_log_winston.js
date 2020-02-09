@@ -11,7 +11,7 @@ var logger = new (winston.Logger)({
         new (winstonDaily)({
             name:`info-file`,
             filename:`./log/server`,
-            datePattern:`_yyyy-MM-DD.log`,
+            datePattern:`_yyyy-MM-dd.log`,
             colorize:false,
             maxsize:50000000,
             maxFiles:1000,
@@ -30,3 +30,6 @@ var logger = new (winston.Logger)({
         })
     ]
 });
+
+logger.debug("디버깅 메시지 입니다");
+logger.error("에러 메시지 입니다");
