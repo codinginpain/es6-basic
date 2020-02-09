@@ -15,21 +15,21 @@ var logger = new (winston.Logger)({
             colorize:false,
             maxsize:50000000,
             maxFiles:1000,
-            level:`info`,
+            level:'info',
             showLevel:true,
             json:false,
             timestamp:timeStampFormat
         }),
         new (winston.transports.Console)({
-            name:`debug-console`,
-            colorize:`true`,
-            level:`debug`,
-            showLevel:`true`,
+            name:'debug-console',
+            colorize:'true',
+            level:'debug',
+            showLevel:'true',
             json:false,
             timestamp:timeStampFormat 
         })
     ]
 });
 
-logger.debug("디버깅 메시지 입니다");
-logger.error("에러 메시지 입니다");
+logger.debug(`디버그 메시지 입니다`);
+logger.error(`에러 메시지 입니다`);
